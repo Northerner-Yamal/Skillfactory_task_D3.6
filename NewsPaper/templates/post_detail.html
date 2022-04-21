@@ -1,0 +1,17 @@
+<!--  наследуемся от шаблона default.html, который мы создавали для flatpages -->
+{% extends 'flatpages/default.html' %}
+
+<!-- Название у нас будет Post -->
+{% block title %}
+Post
+{% endblock title %}
+
+<!-- В контенте на странице мы выводим саму новость, идентификатор которого был передан в url -->
+{% block content %}
+{{ Post.author }}<br>
+{{ Post.categoryType }}<br>
+{{ Post.title }}<br>
+{{ Post.text }}<br>
+{{ Post.dateCreation }}<br>
+{{ Post.rating }}
+{% endblock content %}
